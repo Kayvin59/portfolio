@@ -1,0 +1,47 @@
+{
+  "name": "kayvin",
+  "version": "0.0.1",
+  "description": "My first portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch",
+    "prod": "NODE_ENV=production webpack --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kayvin59/portfolio.git"
+  },
+  "author": "Kayvin Ngueeping",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kayvin59/portfolio/issues"
+  },
+  "homepage": "https://github.com/Kayvin59/portfolio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0.0",
+    "css-hot-loader": "^1.4.4",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
+    "file-loader": "^5.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "serialize-javascript": "^2.1.2",
+    "style-loader": "^1.1.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {}
+}
