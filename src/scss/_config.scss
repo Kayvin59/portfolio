@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+// Configuration File
+// ----------------------------------------------------------------------------
+
+/*
+
+CDN variables
+Colors Variables
+Responsive Design Breakpoints Variables
+Language Support Variables
+Main Z-Index layers
+Other variables which don’t fit into the other parts.
+
+*/
+
+@import "config/reset";
+@import "config/variables";
+@import "config/mixins";
+@import "config/utilities";

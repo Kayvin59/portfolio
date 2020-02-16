@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// ixins
+// ----------------------------------------------------------------------------
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin unstyle-link() {
+	background-color: transparent;
+	color: inherit;
+	font-family: inherit;
+	text-decoration: none;
+}
+
+@mixin visually-hidden() {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    // Show information on focusable element
+    // for keyboard only user
+    & a:focus,
+    & input:focus,
+    & button:focus,
+    &.a:focus,
+    &.input:focus,
+    &.button:focus {
+        position:static;
+        width:auto; height:auto;
+    }
+}

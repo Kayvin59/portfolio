@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------------------
+// Variables
+// ----------------------------------------------------------------------------
+
+
+/*** Color ***/
+$primary-color: #22264B; // Icones, Button, menu ? #E6CF8B
+$secondary-color: #9fa8a3; // Title
+$white-color: #ffffff;
+$black-color: #000000;
+$error-color: #c00;
+$success-color: #008827;
+
+/*** Font ***/
+
+/*** Breakpoint ***/
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
