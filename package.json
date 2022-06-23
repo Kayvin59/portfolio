@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
+  "author": "Kayvin NGUEEPING",
+  "descritpion": "Kayvin Ngueeping Portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Kayvin59/portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
