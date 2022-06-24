@@ -4,10 +4,10 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
 
-  // CHeck if work
   "settings": {
     "import/resolver": {
       "node": {
@@ -17,7 +17,7 @@
     }
   },
 
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "jest"],
 
   "extends": [
     "next/core-web-vitals",
@@ -27,7 +27,8 @@
     "prettier",
     "eslint-config-prettier",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended"
   ],
 
   "rules": {
