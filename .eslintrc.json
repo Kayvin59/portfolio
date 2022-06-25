@@ -32,6 +32,11 @@
   ],
 
   "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "no-console": 2,
     "prettier/prettier": [
       "error",
