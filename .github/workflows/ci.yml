@@ -17,5 +17,3 @@ jobs:
         run: yarn prettier
       - name: Build Application
         run: yarn build
-      - name: Run Tests
-        run: yarn test
