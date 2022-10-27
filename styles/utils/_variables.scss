@@ -10,7 +10,7 @@ $primary-font: 'Playfair Display', serif;
 $secondary-font: 'Abril Fatface', cursive;
 
 /* Font Sizes */
-$fs-small: 16px;
-$fs-default: 21px;
-$fs-large: 28px;
-$fs-XL: 42px;
+$fs-small: 0.75rem; // line-height: $fs-XL;
+$fs-default: 1rem; // line-height: 1.625rem;
+$fs-large: 1.75rem; // line-height: 2.813rem;
+$fs-XL: 2.625rem; // line-height: 4.188rem;

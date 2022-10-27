@@ -1,15 +1,20 @@
-import React from 'react'
+import About from './About/About'
+import Contact from './Contact/Contact'
+import Home from './Home/Home'
+import Work from './Work/Work'
 
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
-import Heading from '../components/Heading/Heading'
 
 const Layout = () => {
   return (
     <>
       <Header />
       <main>
-        <Heading />
+        <Home id="Home" />
+        <About id="About" />
+        <Work id="Work" />
+        <Contact id="Contact" />
       </main>
       <Footer />
     </>
