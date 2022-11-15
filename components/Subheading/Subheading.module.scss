@@ -1,0 +1,9 @@
+@import '../../styles/utils/variables';
+
+.subheading {
+  margin: 60px 0;
+  font-size: $fs-large;
+  line-height: $fs-large;
+  text-transform: uppercase;
+  text-align: center;
+}

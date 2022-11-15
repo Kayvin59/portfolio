@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './Section.module.scss'
 
 type Props = {
-  children: React.ReactElement
+  children: React.ReactNode
   id: string
 }
 

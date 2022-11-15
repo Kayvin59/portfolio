@@ -1,4 +1,6 @@
+import Heading from '../../components/Heading/Heading'
 import Section from '../../components/Section/Section'
+import Subheading from '../../components/Subheading/Subheading'
 
 type Props = {
   id: string
@@ -7,7 +9,8 @@ type Props = {
 const Home = ({ id }: Props) => {
   return (
     <Section id={id}>
-      <span>Home</span>
+      <Subheading fullname="Kayvin Ngueeping" />
+      <Heading />
     </Section>
   )
 }
