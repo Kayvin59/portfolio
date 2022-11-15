@@ -15,7 +15,6 @@ const Navbar = ({ isActive, onClick }: Props) => {
   return (
     <nav className={`${styles.navbar} ${isActive ? styles.active : ''}`}>
       <Link
-        onClick={onClick}
         href="/#About"
         className={currentRoute === '/about' ? styles.active : styles.nonActive}
       >
@@ -24,7 +23,6 @@ const Navbar = ({ isActive, onClick }: Props) => {
         </button>
       </Link>
       <Link
-        onClick={onClick}
         href="/#Work"
         className={currentRoute === '/Work' ? styles.active : styles.nonActive}
       >
@@ -33,7 +31,6 @@ const Navbar = ({ isActive, onClick }: Props) => {
         </button>
       </Link>
       <Link
-        onClick={onClick}
         href="/#Contact"
         className={
           currentRoute === '/Contact' ? styles.active : styles.nonActive
