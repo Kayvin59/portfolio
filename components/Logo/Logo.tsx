@@ -9,7 +9,7 @@ const Logo = () => {
       <span className={styles.logo}>
         <Image
           className={styles.img}
-          src="/KN-logo.svg"
+          src="/logo.svg"
           alt="An SVG of my logo"
           width={60}
           height={60}
