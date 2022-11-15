@@ -1,4 +1,5 @@
 import Section from '../../components/Section/Section'
+import Title from '../../components/Title/Title'
 
 type Props = {
   id: string
@@ -7,7 +8,7 @@ type Props = {
 const Contact = ({ id }: Props) => {
   return (
     <Section id={id}>
-      <span>Contact</span>
+      <Title content={id} />
     </Section>
   )
 }

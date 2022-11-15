@@ -1,0 +1,10 @@
+@import '../../styles/utils/variables';
+
+.title {
+  display: inline-block;
+  min-width: 100px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid $border-color;
+  text-align: center;
+}
