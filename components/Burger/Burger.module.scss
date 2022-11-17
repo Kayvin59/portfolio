@@ -1,44 +1,47 @@
 @import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
 
 .burger {
-  width: 3.75rem;
-  height: 3.75rem;
-  position: relative;
-  cursor: pointer;
-  z-index: 1;
+  @include devices(lg) {
+    width: 3.75rem;
+    height: 3.75rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
 
-  &.active {
-    span {
-      &:nth-child(1) {
-        transform: rotate(40deg);
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform: rotate(40deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-40deg);
+        }
       }
+    }
 
-      &:nth-child(2) {
-        opacity: 0;
+    span {
+      position: absolute;
+      left: 25%;
+      top: 50%;
+      width: 2rem;
+      height: 0.188rem;
+      background-color: $text-color;
+
+      &:nth-child(1) {
+        transform: translateY(-0.5rem);
+        animation-delay: 100ms;
       }
 
       &:nth-child(3) {
-        transform: rotate(-40deg);
+        transform: translateY(0.5rem);
+        animation-delay: 100ms;
       }
-    }
-  }
-
-  span {
-    position: absolute;
-    left: 25%;
-    top: 50%;
-    width: 32px;
-    height: 3px;
-    background-color: $text-color;
-
-    &:nth-child(1) {
-      transform: translateY(-8px);
-      animation-delay: 100ms;
-    }
-
-    &:nth-child(3) {
-      transform: translateY(8px);
-      animation-delay: 100ms;
     }
   }
 }
