@@ -10,33 +10,43 @@ type Props = {
 
 const Navbar = ({ isActive, onClick }: Props) => {
   const router = useRouter()
-  const currentRoute = router.pathname
+  const currentRoute = router.asPath
 
   return (
-    <nav className={`${styles.navbar} ${isActive ? styles.active : ''}`}>
-      <Link
-        href="/#About"
-        className={currentRoute === '/about' ? styles.active : styles.nonActive}
-      >
-        <button type="button" onClick={onClick}>
+    <nav className={`${styles.navbar} ${isActive ? styles.expanded : ''}`}>
+      <Link href="/">
+        <button
+          type="button"
+          onClick={onClick}
+          className={currentRoute === '/' ? 'active' : ''}
+        >
+          Home
+        </button>
+      </Link>
+      <Link href="/#About">
+        <button
+          type="button"
+          onClick={onClick}
+          className={currentRoute === '/#About' ? 'active' : ''}
+        >
           About
         </button>
       </Link>
-      <Link
-        href="/#Work"
-        className={currentRoute === '/Work' ? styles.active : styles.nonActive}
-      >
-        <button type="button" onClick={onClick}>
+      <Link href="/#Work">
+        <button
+          type="button"
+          onClick={onClick}
+          className={currentRoute === '/#Work' ? 'active' : ''}
+        >
           Work
         </button>
       </Link>
-      <Link
-        href="/#Contact"
-        className={
-          currentRoute === '/Contact' ? styles.active : styles.nonActive
-        }
-      >
-        <button type="button" onClick={onClick}>
+      <Link href="/#Contact">
+        <button
+          type="button"
+          onClick={onClick}
+          className={currentRoute === '/#Contact' ? 'active' : ''}
+        >
           Contact
         </button>
       </Link>
@@ -45,10 +55,3 @@ const Navbar = ({ isActive, onClick }: Props) => {
 }
 
 export default Navbar
-
-/* ;<li className={router.asPath === '/#About' ? 'active' : ''}>
-  <Link href="/#About" replace>
-    About
-  </Link>
-</li>
- */
