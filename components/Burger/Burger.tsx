@@ -5,11 +5,6 @@ type Props = {
   handleToggle: () => void
 }
 
-/* interface Props extends React.ComponentProps<'button'> {
-  isOpen: boolean
-  handleToggle: () => void
-} */
-
 const Burger = ({ isOpen, handleToggle }: Props) => {
   return (
     <button

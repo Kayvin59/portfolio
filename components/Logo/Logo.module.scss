@@ -1,9 +1,12 @@
 @import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
 
 .logo {
   cursor: pointer;
-  &:hover {
-    border: 1px solid $text-color;
+  @include devices(lg) {
+    &:hover {
+      border: 1px solid $text-color;
+    }
   }
 }
 
