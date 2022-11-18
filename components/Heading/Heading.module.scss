@@ -1,0 +1,9 @@
+@import '../../styles/utils/variables';
+
+.title {
+  font-family: $secondary-font;
+  font-size: $fs-XL;
+  line-height: $fs-XL;
+  text-align: center;
+  text-decoration: underline;
+}

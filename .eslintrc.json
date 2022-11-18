@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+
+  "plugins": ["@typescript-eslint", "jest"],
+
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier",
+    "eslint-config-prettier",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended"
+  ],
+
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-console": 2,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
 }

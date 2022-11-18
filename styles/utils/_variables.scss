@@ -1,0 +1,16 @@
+/* Color */
+$bg-color: #22264b;
+$border-color: #9fa8a3;
+$text-color: #ffe593;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap');
+
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Abril Fatface', cursive;
+
+/* Font Sizes */
+$fs-small: 0.75rem; // line-height: $fs-XL;
+$fs-default: 1rem; // line-height: 1.625rem;
+$fs-large: 1.75rem; // line-height: 2.813rem;
+$fs-XL: 2.625rem; // line-height: 4.188rem;

@@ -1,0 +1,15 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixins';
+
+.logo {
+  cursor: pointer;
+  @include devices(lg) {
+    &:hover {
+      border: 1px solid $text-color;
+    }
+  }
+}
+
+.img {
+  width: 3.75rem;
+}
