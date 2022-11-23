@@ -4,8 +4,7 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true,
-    "jest/globals": true
+    "es6": true
   },
 
   "settings": {
@@ -17,7 +16,7 @@
     }
   },
 
-  "plugins": ["@typescript-eslint", "jest"],
+  "plugins": ["@typescript-eslint"],
 
   "extends": [
     "next/core-web-vitals",
@@ -27,8 +26,7 @@
     "prettier",
     "eslint-config-prettier",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jest/recommended"
+    "plugin:react-hooks/recommended"
   ],
 
   "rules": {
