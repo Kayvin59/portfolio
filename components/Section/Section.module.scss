@@ -1,6 +1,7 @@
 @import '../../styles/utils/variables';
 
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -1,4 +1,5 @@
 import Heading from '../../components/Heading/Heading'
+import ScrollDown from '../../components/ScrollDown/ScrollDown'
 import Section from '../../components/Section/Section'
 import Subheading from '../../components/Subheading/Subheading'
 
@@ -11,6 +12,7 @@ const Home = ({ id }: Props) => {
     <Section id={id}>
       <Subheading fullname="Kayvin Ngueeping" />
       <Heading />
+      <ScrollDown />
     </Section>
   )
 }
