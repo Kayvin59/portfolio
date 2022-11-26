@@ -11,7 +11,7 @@ const Layout = () => {
     <>
       <Header />
       <main>
-        <Home id="Home" />
+        <Home id="Home" fullname="Kayvin Ngueeping" job="Front-End Developer" />
         <About id="About" />
         <Work id="Work" />
         <Contact id="Contact" />

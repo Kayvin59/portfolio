@@ -25,9 +25,10 @@
 
 .button {
   position: absolute;
-  bottom: 10px;
+  bottom: 3.75rem;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
   & > span {
     overflow: visible !important;
   }
