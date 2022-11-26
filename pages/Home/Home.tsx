@@ -5,13 +5,15 @@ import Subheading from '../../components/Subheading/Subheading'
 
 type Props = {
   id: string
+  fullname: string
+  job: string
 }
 
-const Home = ({ id }: Props) => {
+const Home = ({ id, fullname, job }: Props) => {
   return (
     <Section id={id}>
-      <Subheading fullname="Kayvin Ngueeping" />
-      <Heading />
+      <Subheading fullname={fullname} />
+      <Heading job={job} />
       <ScrollDown />
     </Section>
   )
