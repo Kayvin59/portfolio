@@ -10,7 +10,8 @@ const Burger = ({ isOpen, handleToggle }: Props) => {
     <button
       type="button"
       className={`${styles.burger} ${isOpen ? styles.active : ''}`}
-      aria-label="burger"
+      aria-label="Toggle navigation"
+      aria-controls="toggleNavbar"
       onClick={handleToggle}
     >
       <span />
