@@ -13,13 +13,13 @@ const Navbar = ({ isActive, onClick }: Props) => {
   const currentRoute = router.asPath
 
   return (
-    <nav className={`${styles.navbar} ${isActive ? styles.expanded : ''}`}>
+    <nav
+      id="toggleNavbar"
+      className={`${styles.navbar} ${isActive ? styles.expanded : ''}`}
+      role="navigation"
+    >
       <Link href="/">
-        <button
-          type="button"
-          onClick={onClick}
-          className={currentRoute === '/' ? 'active' : ''}
-        >
+        <button type="button" onClick={onClick}>
           Home
         </button>
       </Link>
@@ -27,7 +27,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
         <button
           type="button"
           onClick={onClick}
-          className={currentRoute === '/#About' ? 'active' : ''}
+          className={`${currentRoute === '/#About' ? styles.active : ''}`}
         >
           About
         </button>
@@ -36,7 +36,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
         <button
           type="button"
           onClick={onClick}
-          className={currentRoute === '/#Work' ? 'active' : ''}
+          className={`${currentRoute === '/#Work' ? styles.active : ''}`}
         >
           Work
         </button>
@@ -45,7 +45,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
         <button
           type="button"
           onClick={onClick}
-          className={currentRoute === '/#Contact' ? 'active' : ''}
+          className={`${currentRoute === '/#Contact' ? styles.active : ''}`}
         >
           Contact
         </button>

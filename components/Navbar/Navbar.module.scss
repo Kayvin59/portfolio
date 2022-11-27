@@ -28,6 +28,13 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+
+  @include devices(lg) {
+    .active {
+      text-decoration: underline;
+    }
+  }
+
   @include devices(lg) {
     flex-direction: row;
     height: auto;
@@ -41,6 +48,7 @@
     button {
       padding: 0.625rem;
       cursor: pointer;
+
       &:hover {
         background-color: $text-color;
         color: $bg-color;
