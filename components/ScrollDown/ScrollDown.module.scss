@@ -1,19 +1,6 @@
 @import '../../styles/utils/variables';
 @import '../../styles/utils/mixins';
 
-@mixin animation($animation) {
-  -webkit-animation: #{$animation};
-  -moz-animation: #{$animation};
-  -ms-animation: #{$animation};
-  animation: #{$animation};
-}
-@mixin transform($transform) {
-  -webkit-transform: $transform;
-  -moz-transform: $transform;
-  -ms-transform: $transform;
-  transform: $transform;
-}
-
 @include keyframes(bouncebounce) {
   0% {
     bottom: 22px;
@@ -29,13 +16,19 @@
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+
   & > span {
     overflow: visible !important;
   }
+
   p {
     display: none;
   }
+
   .img {
     @include animation(bouncebounce 0.9s 1.5s infinite ease-out alternate);
+    &:hover {
+      animation-play-state: paused;
+    }
   }
 }
