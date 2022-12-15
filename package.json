@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001436",
+    "caniuse-lite": "^1.0.30001439",
     "next": "12.1.6",
     "node-sass": "^8.0.0",
     "react": "18.2.0",
