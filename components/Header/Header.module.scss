@@ -1,7 +1,7 @@
 @import '../../styles/utils/variables';
 
 .header {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -10,4 +10,7 @@
   top: 0;
   background-color: $bg-color;
   z-index: 1;
+  &.fixed {
+    display: flex;
+  }
 }

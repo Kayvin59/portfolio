@@ -6,7 +6,11 @@ import Navbar from '../Navbar/Navbar'
 
 import styles from './Header.module.scss'
 
-const Header = () => {
+type Props = {
+  isVisible: boolean
+}
+
+const Header = ({ isVisible }: Props) => {
   const [open, setOpen] = useState(false)
 
   const handleToggle = () => {
@@ -18,7 +22,7 @@ const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${!isVisible ? styles.fixed : ''}`}>
       <Logo />
       <Navbar isActive={open} onClick={handleClose} />
       <Burger isOpen={open} handleToggle={handleToggle} />
