@@ -19,7 +19,7 @@ const About = ({ id }: Props) => {
         sites simples et fonctionnels. Aujourd&apos;hui je travaille
         principalement avec React, Next.js, Typescript avec un oeil prononcé
         pour le détail. Je cherche toujours à améliorer mes compétences et je
-        réste a l&apos;affut des dernières tendances en développement Web.
+        reste a l&apos;affut des dernières tendances en développement Web.
       </p>
       <p>
         Durant mon temps libre je pratique du futsal, de l&apos;escalade et du
