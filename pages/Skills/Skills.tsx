@@ -12,6 +12,7 @@ import {
   SiJavascript,
   SiJira,
   SiMicrosoftteams,
+  SiNextdotjs,
   SiReact,
   SiSass,
   SiSketch,
@@ -20,6 +21,7 @@ import {
   SiTypescript,
   SiWebpack
 } from 'react-icons/si'
+
 import Cardlist from '../../components/Cardlist/Cardlist'
 import Section from '../../components/Section/Section'
 import Title from '../../components/Title/Title'
@@ -45,7 +47,8 @@ const iconMap: { [key: string]: IconType } = {
   SiGithub,
   SiBitbucket,
   SiWebpack,
-  SiBabel
+  SiBabel,
+  SiNextdotjs
 }
 
 const Datas = [
@@ -73,8 +76,8 @@ const Datas = [
   },
   {
     name: 'development',
-    items: ['Github', 'Bitbucket', 'Webpack', 'Babel'],
-    icons: ['SiGithub', 'SiBitbucket', 'SiWebpack', 'SiBabel']
+    items: ['Github', 'Bitbucket', 'Webpack', 'Babel', 'Next.js'],
+    icons: ['SiGithub', 'SiBitbucket', 'SiWebpack', 'SiBabel', 'SiNextdotjs']
   }
 ]
 
