@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import example from '../../asset/img-test.jpg'
+import example from '../../asset/img-test.png'
 
 import styles from './Card.module.scss'
 
