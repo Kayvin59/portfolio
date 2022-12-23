@@ -10,14 +10,21 @@ const About = ({ id }: Props) => {
     <Section id={id}>
       <Title content={id} />
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odit a
-        omnis in, molestiae sit laborum consectetur sequi quas ipsa itaque.
-        Nobis a dolore aut sint consequatur unde, doloribus veniam.
+        Je suis développeur front-end basé a Lille. Depuis plus de 6 ans je
+        participe au développement de sites e-commerce pour des marques locales,
+        nationales comme des marques de luxe Internationales.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odit a
-        omnis in, molestiae sit laborum consectetur sequi quas ipsa itaque.
-        Nobis a dolore aut sint consequatur unde, doloribus veniam.
+        Grâce a ces expériences je connais les bonnes pratiques pour créer des
+        sites simples et fonctionnels. Aujourd&apos;hui je travaille
+        principalement avec React, Next.js, Typescript avec un oeil prononcé
+        pour le détail. Je cherche toujours à améliorer mes compétences et je
+        reste a l&apos;affut des dernières tendances en développement Web.
+      </p>
+      <p>
+        Durant mon temps libre je pratique du futsal, de l&apos;escalade et du
+        tennis. J&apos;adore et j&apos;ai besoin de musique tous les jours. Et
+        pour finir en bon lillois qui se respecte j&apos;aime la bière.
       </p>
     </Section>
   )

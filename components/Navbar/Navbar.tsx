@@ -32,6 +32,15 @@ const Navbar = ({ isActive, onClick }: Props) => {
           About
         </button>
       </Link>
+      <Link href="/#Skills">
+        <button
+          type="button"
+          onClick={onClick}
+          className={`${currentRoute === '/#Skills' ? styles.active : ''}`}
+        >
+          Skills
+        </button>
+      </Link>
       <Link href="/#Work">
         <button
           type="button"

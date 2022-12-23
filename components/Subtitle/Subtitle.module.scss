@@ -1,12 +1,10 @@
 @import '../../styles/utils/variables';
 
-.title {
+.subtitle {
   display: inline-block;
-  min-width: 6.25rem;
-  margin: 0 auto 3.75rem;
-  padding: 0.938rem;
-  border: 1px solid $border-color;
-  font-size: 1.5rem;
+  margin: 0 auto 1.25rem;
+  border-bottom: 3px solid $text-color;
+  font-size: 1.25rem;
   font-family: $secondary-font;
   text-align: center;
   text-transform: uppercase;

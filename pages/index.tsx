@@ -4,6 +4,7 @@ import { useIntersectionObserver } from 'usehooks-ts'
 import About from './About/About'
 import Contact from './Contact/Contact'
 import Home from './Home/Home'
+import Skills from './Skills/Skills'
 import Work from './Work/Work'
 
 import Footer from '../components/Footer/Footer'
@@ -12,7 +13,7 @@ import ScrollWrapper from '../components/ScrollWrapper/ScrollWrapper'
 
 const Layout = () => {
   const myRef = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(myRef, {})
+  const entry = useIntersectionObserver(myRef, { threshold: 0.9 })
   const isVisible = !!entry?.isIntersecting
 
   return (
@@ -23,6 +24,7 @@ const Layout = () => {
         <ScrollWrapper>
           <div ref={myRef} />
           <About id="About" />
+          <Skills id="Skills" />
           <Work id="Work" />
           <Contact id="Contact" />
         </ScrollWrapper>

@@ -1,0 +1,21 @@
+@import '../../styles/utils/variables';
+
+.cardlist {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  padding: 1.25rem;
+  border: 1px solid $border-color;
+  text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: $border-color;
+    transform: skew(2deg, 2deg);
+  }
+}
