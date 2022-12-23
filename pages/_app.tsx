@@ -12,6 +12,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           name="description"
           content="Je suis développeur front-end depuis plus de 6 ans. J'habite à Lille. Bienvenue sur mon site"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} className="root" />{' '}
