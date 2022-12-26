@@ -53,6 +53,7 @@ const iconMap: { [key: string]: IconType } = {
 
 const Datas = [
   {
+    id: 'code',
     name: 'code',
     items: ['HTML', 'CSS', 'SASS', 'Javascript', 'React', 'Typescript'],
     icons: [
@@ -65,16 +66,19 @@ const Datas = [
     ]
   },
   {
+    id: 'design',
     name: 'design',
     items: ['Figma', 'Sketch', 'Adobe XD', 'Illustrator'],
     icons: ['SiFigma', 'SiSketch', 'SiAdobexd', 'DiIllustrator']
   },
   {
+    id: 'communication',
     name: 'communication',
     items: ['Slack', 'Teams', 'Jira', 'Confluence', 'Trello'],
     icons: ['SiSlack', 'SiMicrosoftteams', 'SiJira', 'SiConfluence', 'SiTrello']
   },
   {
+    id: 'development',
     name: 'development',
     items: ['Github', 'Bitbucket', 'Webpack', 'Babel', 'Next.js'],
     icons: ['SiGithub', 'SiBitbucket', 'SiWebpack', 'SiBabel', 'SiNextdotjs']
@@ -93,6 +97,7 @@ const Skills = ({ id }: Props) => {
         {Datas.map((data) => {
           return (
             <Cardlist
+              key={data.id}
               subtitle={data.name}
               categories={data.items}
               icons={data.icons.map((icon) => {
