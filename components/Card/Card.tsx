@@ -7,7 +7,7 @@ import Subtitle from '../Subtitle/Subtitle'
 
 type Props = {
   subtitle: string
-  description: string
+  description: string[]
 }
 
 const Card = ({ subtitle, description }: Props) => {
@@ -23,7 +23,13 @@ const Card = ({ subtitle, description }: Props) => {
       </div>
       <div className={styles.cardbody}>
         <Subtitle content={subtitle} />
-        <p>{description}</p>
+        <ul>
+          {description.map((item) => (
+            <li className={styles.listitem} key={item}>
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
