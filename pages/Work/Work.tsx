@@ -9,7 +9,8 @@ const Datas = [
     id: 'happychic',
     name: 'happychic',
     description: ['Maintenance et évolution des 3 sites'],
-    img: 'happychic.jpg'
+    img: 'happychic.jpg',
+    altText: 'Chemise a rayures en gros plan'
   },
   {
     id: 'loewe',
@@ -18,7 +19,8 @@ const Datas = [
       'Résolution de bugs',
       "Réalisation d'un blog (Loewe craftprize)"
     ],
-    img: 'loewe.jpg'
+    img: 'loewe.jpg',
+    altText: 'Sac à main sur fond bleu avec ses accessoires'
   },
   {
     id: "l'Oréal",
@@ -27,7 +29,8 @@ const Datas = [
       "Réalisation d'un site e-commerce B2B from scratch",
       "Développement d'une interface utilisateur responsive"
     ],
-    img: 'loreal.jpg'
+    img: 'loreal.jpg',
+    altText: "Plusieurs produits de beauté de la marque l'Oréal"
   },
   {
     id: 'kering',
@@ -36,7 +39,8 @@ const Datas = [
       'Réalisation de 5 sites e-commerce',
       'Echange avec les clients pour collecter et aider aux besoins métiers'
     ],
-    img: 'kering.jpg'
+    img: 'kering.jpg',
+    altText: 'Sac à main Yves-Saint-Laurent posé sur une table'
   },
   {
     id: 'GSMC',
@@ -45,7 +49,8 @@ const Datas = [
       "Développement d'un tunnel de souscription",
       'Résolution de bugs'
     ],
-    img: 'gsmc.jpg'
+    img: 'gsmc.jpg',
+    altText: 'Personne présentant un papier et un stylo à un client'
   }
 ]
 
@@ -65,6 +70,7 @@ const Work = ({ id }: Props) => {
               subtitle={data.name}
               description={data.description}
               img={data.img}
+              altText={data.altText}
             />
           )
         })}

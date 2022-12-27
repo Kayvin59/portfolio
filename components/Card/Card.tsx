@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import example from '../../asset/img-test.png'
 
 import styles from './Card.module.scss'
 
@@ -8,18 +7,15 @@ import Subtitle from '../Subtitle/Subtitle'
 type Props = {
   subtitle: string
   description: string[]
+  img: string
+  altText: string
 }
 
-const Card = ({ subtitle, description }: Props) => {
+const Card = ({ subtitle, description, img, altText }: Props) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardheader}>
-        <Image
-          src={example}
-          alt="Alt text for the picture"
-          width="300px"
-          height="200px"
-        />
+        <Image src={`/${img}`} alt={altText} width="300px" height="200px" />
       </div>
       <div className={styles.cardbody}>
         <Subtitle content={subtitle} />
