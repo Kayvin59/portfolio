@@ -8,7 +8,8 @@ const Datas = [
   {
     id: 'happychic',
     name: 'happychic',
-    description: ['Maintenance et évolution des 3 sites']
+    description: ['Maintenance et évolution des 3 sites'],
+    img: 'happychic.jpg'
   },
   {
     id: 'loewe',
@@ -16,7 +17,8 @@ const Datas = [
     description: [
       'Résolution de bugs',
       "Réalisation d'un blog (Loewe craftprize)"
-    ]
+    ],
+    img: 'loewe.jpg'
   },
   {
     id: "l'Oréal",
@@ -24,7 +26,8 @@ const Datas = [
     description: [
       "Réalisation d'un site e-commerce B2B from scratch",
       "Développement d'une interface utilisateur responsive"
-    ]
+    ],
+    img: 'loreal.jpg'
   },
   {
     id: 'kering',
@@ -32,7 +35,8 @@ const Datas = [
     description: [
       'Réalisation de 5 sites e-commerce',
       'Echange avec les clients pour collecter et aider aux besoins métiers'
-    ]
+    ],
+    img: 'kering.jpg'
   },
   {
     id: 'GSMC',
@@ -40,7 +44,8 @@ const Datas = [
     description: [
       "Développement d'un tunnel de souscription",
       'Résolution de bugs'
-    ]
+    ],
+    img: 'gsmc.jpg'
   }
 ]
 
@@ -59,6 +64,7 @@ const Work = ({ id }: Props) => {
               key={data.id}
               subtitle={data.name}
               description={data.description}
+              img={data.img}
             />
           )
         })}
