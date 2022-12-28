@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Cardlist.module.scss'
 
-import List from '../List/List'
-import Subtitle from '../Subtitle/Subtitle'
+import List from '../List'
+import Subtitle from '../Subtitle'
 
 type Props = {
   subtitle: string

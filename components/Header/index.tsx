@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-import Burger from '../Burger/Burger'
-import Logo from '../Logo/Logo'
-import Navbar from '../Navbar/Navbar'
+import Burger from '../Burger'
+import Logo from '../Logo'
+import Navbar from '../Navbar'
 
 import styles from './Header.module.scss'
 

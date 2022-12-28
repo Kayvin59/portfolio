@@ -22,9 +22,9 @@ import {
   SiWebpack
 } from 'react-icons/si'
 
-import Cardlist from '../../components/Cardlist/Cardlist'
-import Section from '../../components/Section/Section'
-import Title from '../../components/Title/Title'
+import Cardlist from '../../components/Cardlist'
+import Section from '../../components/Section'
+import Title from '../../components/Title'
 
 import styles from './Skills.module.scss'
 
