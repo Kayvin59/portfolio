@@ -1,5 +1,5 @@
-import Section from '../../components/Section'
-import Title from '../../components/Title'
+import Section from '@/components/Section'
+import Title from '@/components/Title'
 
 type Props = {
   id: string

@@ -1,6 +1,6 @@
-import Card from '../../components/Card'
-import Section from '../../components/Section'
-import Title from '../../components/Title'
+import Card from '@/components/Card'
+import Section from '@/components/Section'
+import Title from '@/components/Title'
 
 import styles from './Work.module.scss'
 

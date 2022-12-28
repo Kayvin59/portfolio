@@ -1,7 +1,7 @@
-import Heading from '../../components/Heading'
-import ScrollDown from '../../components/ScrollDown'
-import Section from '../../components/Section'
-import Subheading from '../../components/Subheading'
+import Heading from '@/components/Heading'
+import ScrollDown from '@/components/ScrollDown'
+import Section from '@/components/Section'
+import Subheading from '@/components/Subheading'
 
 type Props = {
   id: string
