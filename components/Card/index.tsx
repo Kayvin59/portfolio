@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import styles from './Card.module.scss'
 
-import Subtitle from '../Subtitle/Subtitle'
+import Subtitle from '../Subtitle'
 
 type Props = {
   subtitle: string

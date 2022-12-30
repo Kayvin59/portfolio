@@ -17,14 +17,15 @@ import {
   SiSass,
   SiSketch,
   SiSlack,
+  SiTailwindcss,
   SiTrello,
   SiTypescript,
   SiWebpack
-} from 'react-icons/si'
+} from 'react-icons/si' /* SiTailwindcss */
 
-import Cardlist from '../../components/Cardlist/Cardlist'
-import Section from '../../components/Section/Section'
-import Title from '../../components/Title/Title'
+import Cardlist from '@/components/Cardlist'
+import Section from '@/components/Section'
+import Title from '@/components/Title'
 
 import styles from './Skills.module.scss'
 
@@ -48,18 +49,28 @@ const iconMap: { [key: string]: IconType } = {
   SiBitbucket,
   SiWebpack,
   SiBabel,
-  SiNextdotjs
+  SiNextdotjs,
+  SiTailwindcss
 }
 
 const Datas = [
   {
     id: 'code',
     name: 'code',
-    items: ['HTML', 'CSS', 'SASS', 'Javascript', 'React', 'Typescript'],
+    items: [
+      'HTML',
+      'CSS',
+      'SASS',
+      'Tailwind',
+      'Javascript',
+      'React',
+      'Typescript'
+    ],
     icons: [
       'SiHtml5',
       'SiCss3',
       'SiSass',
+      'SiTailwindcss',
       'SiJavascript',
       'SiReact',
       'SiTypescript'
