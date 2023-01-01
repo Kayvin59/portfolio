@@ -3,17 +3,17 @@
 .cardlist {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 18.75rem;
   padding: 1.25rem;
-  border: 1px solid $border-color;
+  border: 0.06rem solid $border-color;
   text-align: center;
   &::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    top: -0.13rem;
+    left: -0.13rem;
+    right: -0.13rem;
+    bottom: -0.13rem;
     z-index: -1;
     background: $border-color;
     transform: skew(2deg, 2deg);
