@@ -1,57 +1,9 @@
-import { IconType } from 'react-icons'
-import { DiIllustrator } from 'react-icons/di'
-import {
-  SiAdobexd,
-  SiBabel,
-  SiBitbucket,
-  SiConfluence,
-  SiCss3,
-  SiFigma,
-  SiGithub,
-  SiHtml5,
-  SiJavascript,
-  SiJira,
-  SiMicrosoftteams,
-  SiNextdotjs,
-  SiReact,
-  SiSass,
-  SiSketch,
-  SiSlack,
-  SiTailwindcss,
-  SiTrello,
-  SiTypescript,
-  SiWebpack
-} from 'react-icons/si' /* SiTailwindcss */
-
 import Cardlist from '@/components/Cardlist'
 import Section from '@/components/Section'
 import Title from '@/components/Title'
+import { iconMap } from '../../constants/iconMap'
 
 import styles from './Skills.module.scss'
-
-const iconMap: { [key: string]: IconType } = {
-  SiHtml5,
-  SiCss3,
-  SiSass,
-  SiJavascript,
-  SiReact,
-  SiTypescript,
-  SiFigma,
-  SiSketch,
-  SiAdobexd,
-  DiIllustrator,
-  SiSlack,
-  SiMicrosoftteams,
-  SiJira,
-  SiConfluence,
-  SiTrello,
-  SiGithub,
-  SiBitbucket,
-  SiWebpack,
-  SiBabel,
-  SiNextdotjs,
-  SiTailwindcss
-}
 
 const Datas = [
   {
@@ -91,8 +43,22 @@ const Datas = [
   {
     id: 'development',
     name: 'development',
-    items: ['Github', 'Bitbucket', 'Webpack', 'Babel', 'Next.js'],
-    icons: ['SiGithub', 'SiBitbucket', 'SiWebpack', 'SiBabel', 'SiNextdotjs']
+    items: [
+      'Github',
+      'Bitbucket',
+      'Webpack',
+      'Babel',
+      'Next.js',
+      'React Testing Library'
+    ],
+    icons: [
+      'SiGithub',
+      'SiBitbucket',
+      'SiWebpack',
+      'SiBabel',
+      'SiNextdotjs',
+      'SiTestinglibrary'
+    ]
   }
 ]
 
