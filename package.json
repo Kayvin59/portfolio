@@ -21,6 +21,7 @@
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.41.5",
     "react-icons": "^4.7.1",
     "sass": "^1.53.0",
     "usehooks-ts": "^2.9.1"
