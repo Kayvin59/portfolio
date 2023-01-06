@@ -9,7 +9,6 @@ const ScrollDown = () => {
     <Link href="/#About">
       <button className={styles.button} type="button">
         <AiOutlineArrowDown />
-        <p>Scroll down</p>
       </button>
     </Link>
   )
