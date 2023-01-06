@@ -1,100 +1,129 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 
 import styles from './ContactForm.module.scss'
 
+type FormData = {
+  firstName: string
+  lastName: string
+  email: string
+  message: string
+}
+
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm<FormData>({ mode: 'onChange' })
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
-    const form = {
-      firstName,
-      lastName,
-      email,
-      message
+  const onSubmitForm = async (data: FormData) => {
+    try {
+      const response = await fetch(`/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+
+      if (response.status === 200) {
+        reset()
+        setIsSubmitted(true)
+      }
+    } catch (err) {
+      console.log(err)
     }
+  }
 
-    const response = await fetch(`/api/contact`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form)
-    })
-
-    const content = await response.json()
-    console.log(content)
-
-    // Reset the form fields
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setMessage('')
+  const contactFormOptions = {
+    firstName: { required: 'Please enter a first name' },
+    lastName: { required: 'Please enter a last name' },
+    email: {
+      required: 'Please enter an email',
+      pattern: {
+        value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+        message: 'Please enter a valid email address'
+      }
+    },
+    message: {
+      required: 'Please enter a message',
+      maxLength: {
+        value: 200,
+        message: 'Message must have maximum 200 characters'
+      }
+    }
   }
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
-        <label className={styles.label} htmlFor="firstName">
-          First Name
-          <input
-            className={styles.input}
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            type="text"
-            id="firstName"
-            name="firstName"
-            required
-          />
-        </label>
+      <form onSubmit={handleSubmit(onSubmitForm)}>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="firstName">
+            First Name
+            <input
+              type="text"
+              id="firstName"
+              {...register('firstName', contactFormOptions.firstName)}
+            />
+            {errors?.firstName && (
+              <span className={styles.errorMsg}>
+                {errors.firstName.message}
+              </span>
+            )}
+          </label>
+        </div>
 
-        <label className={styles.label} htmlFor="lastName">
-          Last Name
-          <input
-            className={styles.input}
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            type="text"
-            id="lastName"
-            name="lastName"
-            required
-          />
-        </label>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="lastName">
+            Last Name
+            <input
+              type="text"
+              id="lastName"
+              {...register('lastName', contactFormOptions.lastName)}
+            />
+            {errors?.lastName && (
+              <span className={styles.errorMsg}>{errors.lastName.message}</span>
+            )}
+          </label>
+        </div>
 
-        <label className={styles.label} htmlFor="email">
-          e-mail
-          <input
-            className={styles.input}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            id="email"
-            name="email"
-            required
-          />
-        </label>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="email">
+            E-mail
+            <input
+              type="email"
+              id="email"
+              {...register('email', contactFormOptions.email)}
+            />
+            {errors?.email && (
+              <span className={styles.errorMsg}>{errors.email.message}</span>
+            )}
+          </label>
+        </div>
 
-        <label className={styles.label} htmlFor="message">
-          message
-          <textarea
-            className={styles.input}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            id="message"
-            name="message"
-            required
-          />
-        </label>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="message">
+            Message
+            <textarea
+              id="message"
+              {...register('message', contactFormOptions.message)}
+            />
+            {errors?.message && (
+              <span className={styles.errorMsg}>{errors.message.message}</span>
+            )}
+          </label>
+        </div>
 
         <button className={styles.button} type="submit">
-          Envoyer
+          Submit
         </button>
       </form>
+      {isSubmitted && <p className={styles.validationMsg}>Message submitted</p>}
     </div>
   )
 }
