@@ -31,7 +31,7 @@
   }
 
   .errorMsg {
-    color: red;
+    color: $error;
     font-weight: bold;
   }
 
@@ -40,6 +40,13 @@
     margin: 0 auto;
     border: 0.06rem solid $border-color;
     padding: 1rem;
+    font-family: $secondary-font;
+    text-transform: uppercase;
     cursor: pointer;
+  }
+
+  .validationMsg {
+    padding: 1.25rem;
+    text-align: center;
   }
 }

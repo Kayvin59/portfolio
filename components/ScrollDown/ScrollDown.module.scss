@@ -20,19 +20,6 @@
   cursor: pointer;
   overflow: visible;
 
-  &:hover {
-    p {
-      display: block;
-    }
-  }
-
-  p {
-    display: none;
-    position: absolute;
-    bottom: 4.063rem;
-    text-align: center;
-  }
-
   svg {
     position: absolute;
     width: 100%;

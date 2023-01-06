@@ -31,7 +31,9 @@ const ContactForm = () => {
         body: JSON.stringify(data)
       })
 
-      if (response.status === 200) {
+      console.log(response.status)
+
+      if (response.status === 201) {
         reset()
         setIsSubmitted(true)
       }
@@ -64,7 +66,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmitForm)}>
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="firstName">
-            First Name
+            Prénom
             <input
               type="text"
               id="firstName"
@@ -80,7 +82,7 @@ const ContactForm = () => {
 
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="lastName">
-            Last Name
+            Nom
             <input
               type="text"
               id="lastName"
@@ -120,10 +122,10 @@ const ContactForm = () => {
         </div>
 
         <button className={styles.button} type="submit">
-          Submit
+          Envoyer
         </button>
       </form>
-      {isSubmitted && <p className={styles.validationMsg}>Message submitted</p>}
+      {isSubmitted && <p className={styles.validationMsg}>Message envoyé !</p>}
     </div>
   )
 }
