@@ -11,6 +11,7 @@ import {
   SiHtml5,
   SiJavascript,
   SiJira,
+  SiLinkedin,
   SiMicrosoftteams,
   SiNextdotjs,
   SiReact,
@@ -47,5 +48,6 @@ export const iconMap: { [key: string]: IconType } = {
   SiBabel,
   SiNextdotjs,
   SiTailwindcss,
-  SiTestinglibrary
+  SiTestinglibrary,
+  SiLinkedin
 }

@@ -1,7 +1,7 @@
 @import '@/styles/utils/variables';
 @import '@/styles/utils/mixins';
 
-.container {
+.wrapper {
   form {
     display: flex;
     flex-direction: column;
@@ -43,6 +43,9 @@
     font-family: $secondary-font;
     text-transform: uppercase;
     cursor: pointer;
+    @include devices(lg) {
+      margin-right: 0;
+    }
   }
 
   .validationMsg {
