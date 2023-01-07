@@ -43,6 +43,9 @@
     font-family: $secondary-font;
     text-transform: uppercase;
     cursor: pointer;
+    @include devices(lg) {
+      margin-right: 0;
+    }
   }
 
   .validationMsg {
