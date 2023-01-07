@@ -62,7 +62,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <form onSubmit={handleSubmit(onSubmitForm)}>
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="firstName">
@@ -96,7 +96,7 @@ const ContactForm = () => {
 
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="email">
-            E-mail
+            Email
             <input
               type="email"
               id="email"
@@ -110,7 +110,7 @@ const ContactForm = () => {
 
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="message">
-            Message
+            Tapez votre message ici
             <textarea
               id="message"
               {...register('message', contactFormOptions.message)}
