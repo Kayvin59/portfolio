@@ -23,6 +23,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & > section {
+    min-height: 100vh;
+  }
+
   & > div {
     width: 100%;
   }

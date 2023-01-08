@@ -69,7 +69,7 @@ type Props = {
 const Skills = ({ id }: Props) => {
   return (
     <Section id={id}>
-      <Title content={id} />
+      <Title content="Compétences" />
       <div className={styles.cardlistwrapper}>
         {Datas.map((data) => {
           return (

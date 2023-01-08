@@ -61,7 +61,7 @@ type Props = {
 const Work = ({ id }: Props) => {
   return (
     <Section id={id}>
-      <Title content={id} />
+      <Title content="Expériences" />
       <div className={styles.cardwrapper}>
         {Datas.map((data) => {
           return (

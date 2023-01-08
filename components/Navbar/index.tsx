@@ -20,7 +20,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
     >
       <Link href="/">
         <button type="button" onClick={onClick}>
-          Home
+          Accueil
         </button>
       </Link>
       <Link href="/#About">
@@ -29,7 +29,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
           onClick={onClick}
           className={`${currentRoute === '/#About' ? styles.active : ''}`}
         >
-          About
+          À propos
         </button>
       </Link>
       <Link href="/#Skills">
@@ -38,7 +38,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
           onClick={onClick}
           className={`${currentRoute === '/#Skills' ? styles.active : ''}`}
         >
-          Skills
+          Compétences
         </button>
       </Link>
       <Link href="/#Work">
@@ -47,7 +47,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
           onClick={onClick}
           className={`${currentRoute === '/#Work' ? styles.active : ''}`}
         >
-          Work
+          Expériences
         </button>
       </Link>
       <Link href="/#Contact">
