@@ -11,14 +11,16 @@ import styles from './Contact.module.scss'
 
 const Datas = [
   {
-    id: 'github',
-    items: ['github'],
-    icons: ['SiGithub']
+    id: 'Linkedin',
+    items: ['Linkedin'],
+    icons: ['SiLinkedin'],
+    link: 'https://www.linkedin.com/in/kayvin-ngueeping-09138b124/'
   },
   {
-    id: 'linkedin',
-    items: ['linkedin'],
-    icons: ['SiLinkedin']
+    id: 'github',
+    items: ['Github'],
+    icons: ['SiGithub'],
+    link: 'https://github.com/Kayvin59'
   }
 ]
 
