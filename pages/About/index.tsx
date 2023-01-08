@@ -8,7 +8,7 @@ type Props = {
 const About = ({ id }: Props) => {
   return (
     <Section id={id}>
-      <Title content={id} />
+      <Title content="À propos" />
       <p>
         Je suis développeur front-end basé a Lille. Depuis plus de 6 ans je
         participe au développement de sites e-commerce pour des marques locales,
