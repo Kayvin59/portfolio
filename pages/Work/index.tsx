@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Card from '@/components/Card'
 import Section from '@/components/Section'
 import Title from '@/components/Title'
@@ -10,7 +12,8 @@ const Datas = [
     name: 'happychic',
     description: ['Maintenance et évolution des 3 sites'],
     img: 'happychic.jpg',
-    altText: 'Chemise a rayures en gros plan'
+    altText: 'Chemise a rayures en gros plan',
+    link: 'https://www.jules.com/fr-fr/l/jules-x-brice/'
   },
   {
     id: 'loewe',
@@ -20,7 +23,8 @@ const Datas = [
       "Réalisation d'un blog (Loewe craftprize)"
     ],
     img: 'loewe.jpg',
-    altText: 'Sac à main sur fond bleu avec ses accessoires'
+    altText: 'Sac à main sur fond bleu avec ses accessoires',
+    link: 'https://craftprize.loewe.com/en/page?fdid=craftprize2023'
   },
   {
     id: "l'Oréal",
@@ -30,7 +34,8 @@ const Datas = [
       "Développement d'une interface utilisateur responsive"
     ],
     img: 'loreal.jpg',
-    altText: "Plusieurs produits de beauté de la marque l'Oréal"
+    altText: "Plusieurs produits de beauté de la marque l'Oréal",
+    link: 'https://www.lorealpartnershop.com/fr/fr/home/?sd=true'
   },
   {
     id: 'kering',
@@ -40,7 +45,8 @@ const Datas = [
       'Echange avec les clients pour collecter et aider aux besoins métiers'
     ],
     img: 'kering.jpg',
-    altText: 'Sac à main Yves-Saint-Laurent posé sur une table'
+    altText: 'Sac à main Yves-Saint-Laurent posé sur une table',
+    link: 'https://www.ysl.com/fr-fr'
   },
   {
     id: 'GSMC',
@@ -50,7 +56,8 @@ const Datas = [
       'Résolution de bugs'
     ],
     img: 'gsmc.jpg',
-    altText: 'Personne présentant un papier et un stylo à un client'
+    altText: 'Personne présentant un papier et un stylo à un client',
+    link: 'https://www.mutuelle-gsmc.fr/home'
   }
 ]
 
@@ -63,17 +70,18 @@ const Work = ({ id }: Props) => {
     <Section id={id}>
       <Title content="Expériences" />
       <div className={styles.cardwrapper}>
-        {Datas.map((data) => {
-          return (
-            <Card
-              key={data.id}
-              subtitle={data.name}
-              description={data.description}
-              img={data.img}
-              altText={data.altText}
-            />
-          )
-        })}
+        {Datas.map((data) => (
+          <Link key={data.id} href={data.link} passHref>
+            <a href={data.link}>
+              <Card
+                subtitle={data.name}
+                description={data.description}
+                img={data.img}
+                altText={data.altText}
+              />
+            </a>
+          </Link>
+        ))}
       </div>
     </Section>
   )
