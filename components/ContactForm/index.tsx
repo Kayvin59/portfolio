@@ -31,12 +31,13 @@ const ContactForm = () => {
         body: JSON.stringify(data)
       })
 
-      console.log(response.status)
-
-      if (response.status === 201) {
-        reset()
-        setIsSubmitted(true)
+      if (!response.ok) {
+        const message = `An error has occured: ${response.status} - ${response.statusText}`
+        throw new Error(message)
       }
+
+      reset()
+      setIsSubmitted(true)
     } catch (err) {
       console.log(err)
     }
