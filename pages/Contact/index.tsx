@@ -35,8 +35,8 @@ const Contact = ({ id }: Props) => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <p>
-            Si vous souhaitez en savoir plus. Vous trouverez différents moyens
-            d&apos;y parvenir ci-dessous.
+            Si vous souhaitez en savoir plus. N&apos;hésitez pas à me contacter
+            via mail ou les liens ci dessous.
           </p>
           <div className={`${styles.inner} ${styles.custom}`}>
             <Subtitle content="Email" />
