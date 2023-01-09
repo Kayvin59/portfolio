@@ -42,7 +42,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     })
 
-    return res.status(201).json({
+    // eslint-disable-next-line no-console
+    console.log(response)
+
+    return res.status(200).json({
       data: response.data
     })
   } catch (e) {
