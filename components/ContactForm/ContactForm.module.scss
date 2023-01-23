@@ -2,6 +2,7 @@
 @import '@/styles/utils/mixins';
 
 .wrapper {
+  flex-direction: column;
   form {
     display: flex;
     flex-direction: column;
