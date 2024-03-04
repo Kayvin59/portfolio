@@ -15,7 +15,7 @@ const Card = ({ subtitle, description, img, altText }: Props) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardheader}>
-        <Image src={`/${img}`} alt={altText} width="300px" height="200px" />
+        <Image src={`/${img}`} alt={altText} width={300} height={200} />
       </div>
       <div className={styles.cardbody}>
         <Subtitle content={subtitle} />

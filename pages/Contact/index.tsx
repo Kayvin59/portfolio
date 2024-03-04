@@ -48,15 +48,13 @@ const Contact = ({ id }: Props) => {
             <Subtitle content="Liens Sociaux" />
             {Datas.map((data) => (
               <Link key={data.id} href={data.link} passHref>
-                <a href={data.link}>
-                  <List
-                    items={data.items}
-                    icons={data.icons.map((icon: string) => {
-                      const Icon = iconMap[icon]
-                      return <Icon />
-                    })}
-                  />
-                </a>
+                <List
+                  items={data.items}
+                  icons={data.icons.map((icon: string) => {
+                    const Icon = iconMap[icon]
+                    return <Icon />
+                  })}
+                />
               </Link>
             ))}
           </div>
