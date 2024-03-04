@@ -15,7 +15,13 @@ const Card = forwardRef<HTMLDivElement, Props>(
     return (
       <div ref={ref} className={styles.card}>
         <div className={styles.cardheader}>
-          <Image src={`/${img}`} alt={altText} width={300} height={200} />
+          <Image
+            src={`/${img}`}
+            alt={altText}
+            width={300}
+            height={200}
+            style={{ width: '300px', height: '200px' }}
+          />
         </div>
         <div className={styles.cardbody}>
           <Subtitle content={subtitle} />
