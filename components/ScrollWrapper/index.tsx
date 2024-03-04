@@ -4,9 +4,10 @@ type Props = {
   children: React.ReactNode
 }
 
-// eslint-disable-next-line no-undef
-const ScrollWrapper = ({ children }: Props): JSX.Element => {
-  return <div>{children}</div>
-}
+const ScrollWrapper = React.forwardRef<HTMLDivElement, Props>(
+  ({ children }, ref) => {
+    return <div ref={ref}>{children}</div>
+  }
+)
 
 export default ScrollWrapper

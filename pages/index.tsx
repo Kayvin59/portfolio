@@ -16,7 +16,7 @@ const Work = dynamic(() => import('./Work'))
 
 const Layout = () => {
   const myRef = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(myRef, { threshold: 0.9 })
+  const entry = useIntersectionObserver(myRef, { threshold: 0.5 })
   const isVisible = !!entry?.isIntersecting
 
   return (
@@ -42,8 +42,7 @@ const Layout = () => {
       <Header isVisible={isVisible} />
       <main>
         <Home id="Home" fullname="Kayvin Ngueeping" job="Front-End Developer" />
-        <ScrollWrapper>
-          <div ref={myRef} />
+        <ScrollWrapper ref={myRef}>
           <About id="About" />
           <Skills id="Skills" />
           <Work id="Work" />

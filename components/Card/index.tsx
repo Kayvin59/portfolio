@@ -1,8 +1,7 @@
 import Image from 'next/image'
-
-import styles from './Card.module.scss'
-
+import { forwardRef } from 'react'
 import Subtitle from '../Subtitle'
+import styles from './Card.module.scss'
 
 type Props = {
   subtitle: string
@@ -11,24 +10,26 @@ type Props = {
   altText: string
 }
 
-const Card = ({ subtitle, description, img, altText }: Props) => {
-  return (
-    <div className={styles.card}>
-      <div className={styles.cardheader}>
-        <Image src={`/${img}`} alt={altText} width={300} height={200} />
+const Card = forwardRef<HTMLDivElement, Props>(
+  ({ subtitle, description, img, altText }, ref) => {
+    return (
+      <div ref={ref} className={styles.card}>
+        <div className={styles.cardheader}>
+          <Image src={`/${img}`} alt={altText} width={300} height={200} />
+        </div>
+        <div className={styles.cardbody}>
+          <Subtitle content={subtitle} />
+          <ul>
+            {description.map((item) => (
+              <li className={styles.listitem} key={item}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div className={styles.cardbody}>
-        <Subtitle content={subtitle} />
-        <ul>
-          {description.map((item) => (
-            <li className={styles.listitem} key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  )
-}
+    )
+  }
+)
 
 export default Card

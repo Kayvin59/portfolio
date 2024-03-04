@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styles from './List.module.scss'
 
 type Props = {
@@ -6,9 +6,9 @@ type Props = {
   icons: React.ReactNode[]
 }
 
-const List = ({ items, icons }: Props) => {
+const List = forwardRef<HTMLUListElement, Props>(({ items, icons }, ref) => {
   return (
-    <ul className={styles.list}>
+    <ul className={styles.list} ref={ref}>
       {items.map((item, index) => (
         <li className={styles.listitem} key={item}>
           {icons[index]}
@@ -17,6 +17,6 @@ const List = ({ items, icons }: Props) => {
       ))}
     </ul>
   )
-}
+})
 
 export default List

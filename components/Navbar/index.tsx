@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-
+import { useEffect, useState } from 'react'
 import styles from './Navbar.module.scss'
 
 type Props = {
@@ -10,7 +10,18 @@ type Props = {
 
 const Navbar = ({ isActive, onClick }: Props) => {
   const router = useRouter()
-  const currentRoute = router.asPath
+  const [activeRoute, setActiveRoute] = useState('')
+
+  useEffect(() => {
+    setActiveRoute(router.asPath)
+  }, [router.asPath])
+
+  const links = [
+    { href: '/#About', label: 'À propos' },
+    { href: '/#Skills', label: 'Compétences' },
+    { href: '/#Work', label: 'Expériences' },
+    { href: '/#Contact', label: 'Contact' }
+  ]
 
   return (
     <nav
@@ -23,42 +34,19 @@ const Navbar = ({ isActive, onClick }: Props) => {
           Accueil
         </button>
       </Link>
-      <Link href="/#About">
-        <button
-          type="button"
-          onClick={onClick}
-          className={`${currentRoute === '/#About' ? styles.active : ''}`}
-        >
-          À propos
-        </button>
-      </Link>
-      <Link href="/#Skills">
-        <button
-          type="button"
-          onClick={onClick}
-          className={`${currentRoute === '/#Skills' ? styles.active : ''}`}
-        >
-          Compétences
-        </button>
-      </Link>
-      <Link href="/#Work">
-        <button
-          type="button"
-          onClick={onClick}
-          className={`${currentRoute === '/#Work' ? styles.active : ''}`}
-        >
-          Expériences
-        </button>
-      </Link>
-      <Link href="/#Contact">
-        <button
-          type="button"
-          onClick={onClick}
-          className={`${currentRoute === '/#Contact' ? styles.active : ''}`}
-        >
-          Contact
-        </button>
-      </Link>
+      {links.map((link) => (
+        <Link key={link.href} href={link.href} passHref>
+          <button
+            type="button"
+            onClick={onClick} // Call the passed onClick function when a link is clicked
+            className={`${styles.navButton} ${
+              activeRoute === link.href ? styles.active : ''
+            }`}
+          >
+            {link.label}
+          </button>
+        </Link>
+      ))}
     </nav>
   )
 }
