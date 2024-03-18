@@ -1,5 +1,7 @@
+/* eslint-disable camelcase */
 import { Metadata } from 'next'
 import React from 'react'
+import { abril_fatface, playfair_display } from './fonts'
 import './global.scss'
 
 export const metadata: Metadata = {
@@ -18,7 +20,10 @@ export const metadata: Metadata = {
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html lang="fr">
+  <html
+    lang="fr"
+    className={`${abril_fatface.variable} ${playfair_display.variable}`}
+  >
     <body>{children}</body>
   </html>
 )

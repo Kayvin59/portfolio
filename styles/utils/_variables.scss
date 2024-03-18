@@ -5,8 +5,8 @@ $text-color: #ffe593;
 $error: red;
 
 /* Font Sizes */
-$primary-font: 'Playfair Display', serif;
-$secondary-font: 'Abril Fatface', cursive;
+$primary-font: var(--font-playfair-display);
+$secondary-font: var(--font-abril-fatface);
 
 /* Font Sizes */
 $fs-small: 0.75rem; // line-height: $fs-XL;

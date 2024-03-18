@@ -119,8 +119,8 @@ $text-color: #ffe593;
 $error: red;
 
 /* Font Sizes */
-$primary-font: 'Playfair Display', serif;
-$secondary-font: 'Abril Fatface', cursive;
+$primary-font: '--font-playfair-display', serif;
+$secondary-font: '--font-abril-fatface', cursive;
 
 /* Font Sizes */
 $fs-small: 0.75rem; // line-height: $fs-XL;
