@@ -1,5 +1,7 @@
+'use client'
+
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './Navbar.module.scss'
 
@@ -9,12 +11,12 @@ type Props = {
 }
 
 const Navbar = ({ isActive, onClick }: Props) => {
-  const router = useRouter()
+  const pathname = usePathname()
   const [activeRoute, setActiveRoute] = useState('')
 
   useEffect(() => {
-    setActiveRoute(router.asPath)
-  }, [router.asPath])
+    setActiveRoute(pathname)
+  }, [pathname])
 
   const links = [
     { href: '/#About', label: 'À propos' },

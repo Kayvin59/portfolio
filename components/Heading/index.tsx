@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Heading.module.scss'
 
 type Props = {

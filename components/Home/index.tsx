@@ -1,3 +1,5 @@
+'use client'
+
 import Heading from '@/components/Heading'
 import ScrollDown from '@/components/ScrollDown'
 import Section from '@/components/Section'

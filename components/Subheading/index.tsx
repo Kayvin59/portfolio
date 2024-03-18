@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Subheading.module.scss'
 
 type Props = {

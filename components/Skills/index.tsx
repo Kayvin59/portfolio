@@ -1,3 +1,5 @@
+'use client'
+
 import Cardlist from '@/components/Cardlist'
 import Section from '@/components/Section'
 import Title from '@/components/Title'

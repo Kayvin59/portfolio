@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Title.module.scss'
 
 type Props = {

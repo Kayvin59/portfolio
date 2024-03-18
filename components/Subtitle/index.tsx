@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './Subtitle.module.scss'
 
 type Props = {
