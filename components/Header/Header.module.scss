@@ -10,12 +10,13 @@
   position: fixed;
   top: 0;
   background-color: $bg-color;
+  box-shadow: 0 0 0 1px $border-color;
   z-index: 1;
 
-  @include devices(lg) {
+/*   @include devices(lg) {
     display: none;
     &.fixed {
       display: flex;
     }
-  }
+  } */
 }

@@ -125,14 +125,15 @@ $secondary-font: '--font-abril-fatface', cursive;
 /* Font Sizes */
 $fs-small: 0.75rem; // line-height: $fs-XL;
 $fs-default: 1rem; // line-height: 1.625rem;
+$fs-desktop: 1.125rem; // line-height: 1.813rem;
 $fs-large: 1.75rem; // line-height: 2.813rem;
 $fs-XL: 2.625rem; // line-height: 4.188rem;
 
 /* Global */
 html,
 body {
-  font-size: $fs-default;
-  line-height: 1.6;
+  font-size: $fs-desktop;
+  line-height: 1.4;
   font-family: $primary-font;
   background-color: $bg-color;
   color: $text-color;
@@ -153,7 +154,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  & > section {
+  & > section:first-child {
     min-height: 100vh;
   }
 
