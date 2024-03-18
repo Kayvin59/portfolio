@@ -1,0 +1,83 @@
+@import '@/styles/utils/variables';
+@import '@/styles/utils/mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  @include devices(lg) {
+    flex-direction: row;
+
+    & > div {
+      width: 50%;
+      display: flex;
+    }
+  }
+}
+
+.list {
+  margin-bottom: 0.6rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.25rem;
+
+  ul {
+    margin-bottom: 0.6rem;
+  }
+
+  li {
+    background-color: $text-color;
+    color: $bg-color;
+    padding: 0.3rem;
+    font-weight: bold;
+  }
+
+  @include devices(lg) {
+    & > p {
+      padding-right: 30%;
+    }
+
+    li {
+      background-color: transparent;
+      color: $text-color;
+      font-weight: 400;
+    }
+  }
+
+  h3 {
+    margin-left: 0;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+
+  &.custom {
+    a {
+      background-color: $text-color;
+      color: $bg-color;
+      padding: 0.3rem;
+      font-weight: bold;
+
+      @include devices(lg) {
+        padding: 0;
+        background-color: transparent;
+        color: $text-color;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @include devices(lg) {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
