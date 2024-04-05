@@ -32,12 +32,12 @@ const Navbar = ({ isActive, onClick }: Props) => {
       role="navigation"
     >
       <Link href="/">
-        <button type="button" onClick={onClick}>
+        <button type="button" onClick={onClick} className={styles.navButton}>
           Accueil
         </button>
       </Link>
       {links.map((link) => (
-        <Link key={link.href} href={link.href} passHref>
+        <Link key={link.href} href={link.href}>
           <button
             type="button"
             onClick={onClick}

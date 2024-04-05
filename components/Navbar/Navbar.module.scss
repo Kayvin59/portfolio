@@ -24,14 +24,6 @@
     z-index: 0;
   }
 
-  button {
-    margin-bottom: 1rem;
-    font-family: $secondary-font;
-    font-size: 1.5rem;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-
   @include devices(lg) {
     display: inline-flex;
     gap: 1.25rem;
@@ -57,8 +49,16 @@
       }
     }
 
-    .active {
-      text-decoration: underline;
-    }
+  }
+}
+
+.navButton {
+  margin-bottom: 1rem;
+  font-family: $secondary-font;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  &.active {
+    text-decoration: underline;
   }
 }
