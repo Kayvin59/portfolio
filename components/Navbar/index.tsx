@@ -37,10 +37,10 @@ const Navbar = ({ isActive, onClick }: Props) => {
         </button>
       </Link>
       {links.map((link) => (
-        <Link key={link.href} href={link.href} passHref>
+        <Link key={link.href} href={link.href} passHref scroll={true}>
           <button
             type="button"
-            onClick={onClick} // Call the passed onClick function when a link is clicked
+            onClick={onClick}
             className={`${styles.navButton} ${
               activeRoute === link.href ? styles.active : ''
             }`}
