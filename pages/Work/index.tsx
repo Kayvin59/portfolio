@@ -72,14 +72,12 @@ const Work = ({ id }: Props) => {
       <div className={styles.cardwrapper}>
         {Datas.map((data) => (
           <Link key={data.id} href={data.link} passHref>
-            <a href={data.link}>
               <Card
                 subtitle={data.name}
                 description={data.description}
                 img={data.img}
                 altText={data.altText}
               />
-            </a>
           </Link>
         ))}
       </div>

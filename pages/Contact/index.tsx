@@ -48,7 +48,6 @@ const Contact = ({ id }: Props) => {
             <Subtitle content="Liens Sociaux" />
             {Datas.map((data) => (
               <Link key={data.id} href={data.link} passHref>
-                <a href={data.link}>
                   <List
                     items={data.items}
                     icons={data.icons.map((icon: string) => {
@@ -56,7 +55,6 @@ const Contact = ({ id }: Props) => {
                       return <Icon />
                     })}
                   />
-                </a>
               </Link>
             ))}
           </div>
