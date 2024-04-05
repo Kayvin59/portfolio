@@ -18,7 +18,6 @@ const Header = ({ isVisible }: Props) => {
   const handleToggle = () => {
     setOpen((prev) => !prev)
   }
-  console.log("open", open)
 
   const handleClose = () => {
     setOpen(false)

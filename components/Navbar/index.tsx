@@ -37,7 +37,7 @@ const Navbar = ({ isActive, onClick }: Props) => {
         </button>
       </Link>
       {links.map((link) => (
-        <Link key={link.href} href={link.href} passHref scroll={true}>
+        <Link key={link.href} href={link.href} passHref>
           <button
             type="button"
             onClick={onClick}
