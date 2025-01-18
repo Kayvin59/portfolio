@@ -3,7 +3,6 @@ import Header from '@/components/Header'
 import '@/styles/global.css'
 import { Metadata } from 'next'
 import React from 'react'
-/* eslint-disable camelcase */
 import { abril_fatface, playfair_display } from './fonts'
 
 export const metadata: Metadata = {
