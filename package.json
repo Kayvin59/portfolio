@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts --fix",
+    "lint": "eslint . --fix",
     "prettier": "prettier --write .",
     "prepare": "husky install"
   },
