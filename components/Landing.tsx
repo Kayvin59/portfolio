@@ -9,13 +9,13 @@ export default function Landing() {
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 space-y-6 text-center md:text-left">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
-              <Button asChild>
+              <Button asChild className="lg-mr-5 bg-button">
                 <Link href="#contact">
                   Get in touch
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <div className="flex items-center space-x-2 text-muted-foreground">
+              <div className="flex items-center space-x-2 lg:self-center text-muted-foreground">
                 <Link href="#work" className="hover:text-primary transition-colors">
                   Discover my work
                 </Link>
@@ -36,7 +36,7 @@ export default function Landing() {
           </div>
           <div className="md:w-1/2 space-y-6">
             <h1 className="text-4xl font-bold">Hi, I'm Kayvin</h1>
-            <h2 className="text-2xl font-semibold text-primary">I build user-friendly interfaces</h2>
+            <h2 className="text-2xl font-semibold text-button">I build user-friendly interfaces</h2>
             <p className="text-muted-foreground">
               With 8 years of experience working with world-class companies, I specialize in building and maintaining products that clients love.
             </p>
