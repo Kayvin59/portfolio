@@ -20,38 +20,39 @@ const skills = [
     icon: Code,
     items: [
       'HTML',
-      'CSS',
-      'SASS',
+      'CSS/SCSS/LESS',
+      'BootStrap/JQuery',
       'Tailwind',
-      'JavaScript',
+      'JavaScript/TypeScript',
       'React',
-      'TypeScript'
+      'Redux/TanStack Query/Shadcn',
+      'Next JS'
     ]
   },
   {
     category: 'Backend',
     icon: Server,
-    items: ['Node.js', 'PostgreSQL', 'Supabase']
+    items: ['Node.js', 'REST API/GraphQL', 'PostgreSQL', 'Supabase', 'Docker']
   },
   {
     category: 'Web3',
     icon: Cpu,
-    items: ['Ethereum', 'Solidity', 'Web3.js']
+    items: ['Solidity', 'Web3.js/ethers.js', 'IPFS', 'Hardhat/Truffle', 'Alchemy/Infura/QuickNode' ]
   },
   {
     category: 'Development',
     icon: Layout,
-    items: ['Git', 'GitHub', 'VS Code', 'Webpack', 'Jest']
+    items: ['Git', 'GitHub/Gitlab/Bitbucket', 'Webpack/Vite', 'ESLint/Prettier', 'Vitest/Jest', 'Github Actions']
   },
   {
     category: 'Communication',
     icon: MessageSquare,
-    items: ['Slack', 'Zoom', 'Jira', 'Confluence']
+    items: ['Slack', 'Teams', 'Jira', 'Confluence', 'Trello']
   },
   {
     category: 'Design',
     icon: Palette,
-    items: ['Figma', 'Adobe XD', 'Sketch', 'Photoshop']
+    items: ['Figma', 'Adobe XD', 'Sketch', 'Illustrator']
   }
 ]
 
@@ -96,7 +97,7 @@ export default function Skills() {
                           key={item}
                           className="flex items-center space-x-2 group"
                         >
-                          <span className="w-2 h-2 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <span className="w-2 h-2 bg-button rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                           <span>{item}</span>
                         </li>
                       ))}
