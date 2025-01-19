@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { Abril_Fatface, Playfair_Display } from 'next/font/google'
 
 export const playfair_display = Playfair_Display({

@@ -1,5 +1,6 @@
 import { IconType } from 'react-icons'
 import { DiIllustrator } from 'react-icons/di'
+import { PiMicrosoftTeamsLogoLight } from 'react-icons/pi'
 import {
   SiAdobexd,
   SiBabel,
@@ -12,7 +13,6 @@ import {
   SiJavascript,
   SiJira,
   SiLinkedin,
-  SiMicrosoftteams,
   SiNextdotjs,
   SiReact,
   SiSass,
@@ -38,7 +38,7 @@ export const iconMap: { [key: string]: IconType } = {
   SiAdobexd,
   DiIllustrator,
   SiSlack,
-  SiMicrosoftteams,
+  PiMicrosoftTeamsLogoLight,
   SiJira,
   SiConfluence,
   SiTrello,
