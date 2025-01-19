@@ -2,8 +2,8 @@
 
 import { LanguageToggle } from '@/components/LanguageToggle'
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from 'lucide-react'
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -58,6 +58,18 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="top" className="w-full h-full bg-transparent">
+              <SheetTitle>
+                Menu
+              </SheetTitle>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-50"
+                onClick={() => setIsOpen(false)}
+              >
+                <X className="h-6 w-6" />
+                <span className="sr-only">Close menu</span>
+              </Button>
               <div className="absolute top-0 right-0 w-full h-full bg-background rounded-bl-full transition-all duration-300 ease-in-out origin-top-right" style={{ transform: isOpen ? 'scale(1)' : 'scale(0)' }}>
                 <nav className="flex flex-col space-y-4 mt-16 mr-8 text-right">
                   {navigation.map((item) => (
