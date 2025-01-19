@@ -1,6 +1,6 @@
 'use client'
 
-import { LanguageToggle } from '@/components/LanguageToggle'
+// import { LanguageToggle } from '@/components/LanguageToggle'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, X } from 'lucide-react'
@@ -48,8 +48,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <LanguageToggle />
-          {/* <ModeToggle /> */}
+          {/* <LanguageToggle /> */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
