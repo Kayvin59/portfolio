@@ -1,13 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
-  { title: 'Happychic', subtitle: 'E-commerce Platform', image: '/happychic.jpg' },
-  { title: 'Loewe', subtitle: 'Blog', image: '/loewe.jpg' },
-  { title: 'LOréal', subtitle: 'E-commerce Platform', image: '/kering.jpg' },
-  { title: 'Kering', subtitle: 'E-commerce Platform', image: '/ysl.jpg' },
-  { title: 'GSMC', subtitle: 'SaaS', image: '/gsmc.jpg' },
-  { title: 'Whiteswap', subtitle: 'Exchange', image: '/exchange.jpg' },
+  { title: 'Happychic', subtitle: 'E-commerce Websites', image: '/happychic.jpg', url: 'https://www.jules.com/fr-fr/l/jules-x-brice/' },
+  { title: 'Loewe', subtitle: 'Blog', image: '/loewe.jpg', url: 'https://craftprize.loewe.com/en/craftprize2025' },
+  { title: 'LOréal', subtitle: 'Luxury E-commerce website', image: '/loreal.jpg', url: 'https://www.lorealpartnershop.com/home' },
+  { title: 'Kering', subtitle: 'Luxury E-commerce website', image: '/ysl.jpg', url: 'https://www.ysl.com/fr-fr' },
+  { title: 'GSMC', subtitle: 'Insurance website', image: '/gsmc.jpg', url: 'https://www.mutuelle-gsmc.fr/' },
+  { title: 'Bricovis', subtitle: 'E-commerce website', image: '/bricovis.jpg', url: 'https://www.bricovis.fr/' },
+  { title: 'Whiteswap', subtitle: 'Decentralized Exchange', image: '/exchange.jpg', url: 'https://ws.exchange/' },
+  { title: 'Based Place ( Side Project )', subtitle: 'DApp', image: '/basedplaceimg.svg', url: 'https://www.basedplace.xyz/' },
 ]
 
 export default function Work() {
@@ -19,25 +22,28 @@ export default function Work() {
           {projects.map((project, index) => (
             <div 
               key={project.title} 
-              className={`flex flex-col ${index % 2 !== 0 ? 'md:translate-y-16' : ''}`}
+              className={`flex flex-col ${index % 2 !== 0 ? 'md:translate-y-32' : ''}`}
             >
-              <Card className="bg-background flex-grow overflow-hidden h-full border-0 rounded-none">
-                <CardContent className="p-0 flex flex-col h-full">
-                  <div className="relative w-full pt-[75%]">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      className="absolute top-0 left-0 w-full h-full"
-                      width={400}
-                      height={300}
-                    />
-                  </div>
-                  <div className="p-4 flex-grow">
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                    <p className="text-muted-foreground">{project.subtitle}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                <Card className="bg-background flex-grow overflow-hidden h-full border-0 rounded-none transition-all duration-300 hover:shadow-[0_0_15px_rgba(82,89,188,0.3)] hover:cursor-pointer">
+                  <CardContent className="p-0 flex flex-col h-full">
+                    <div className="relative w-full pt-[75%]">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        className="absolute top-0 left-0 w-full h-full"
+                        width={736}
+                        height={552}
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
+                    <div className="p-4 flex-grow">
+                      <h3 className="text-xl font-semibold">{project.title}</h3>
+                      <p className="text-muted-foreground">{project.subtitle}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           ))}
         </div>
