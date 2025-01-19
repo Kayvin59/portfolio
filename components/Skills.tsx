@@ -3,14 +3,14 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import {
-    ChevronLeft,
-    ChevronRight,
-    Code,
-    Cpu,
-    Layout,
-    MessageSquare,
-    Palette,
-    Server
+  ChevronLeft,
+  ChevronRight,
+  Code,
+  Cpu,
+  Layout,
+  MessageSquare,
+  Palette,
+  Server
 } from 'lucide-react'
 import { useRef } from 'react'
 
@@ -72,7 +72,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
+        <h2 className="text-3xl font-abril text-center mb-8">Skills</h2>
         <div className="relative">
           <div
             ref={sliderRef}
@@ -86,11 +86,11 @@ export default function Skills() {
               >
                 <Card className="h-full">
                   <CardHeader className="bg-muted flex flex-col items-center">
-                    <skill.icon className="h-12 w-12 text-primary mb-2" />
-                    <CardTitle>{skill.category}</CardTitle>
+                    <skill.icon className="h-12 w-12 text-button mb-2" />
+                    <CardTitle className="text-muted-foreground">{skill.category}</CardTitle>
                   </CardHeader>
                   <CardContent className="mt-4">
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 flex flex-col items-center">
                       {skill.items.map((item) => (
                         <li
                           key={item}
