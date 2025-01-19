@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${abril_fatface.variable} ${playfair_display.variable}`}>
-      <body>
+      <body className={`font-sans ${playfair_display.className}`}>
         <Header />
         {children}
         <Footer />

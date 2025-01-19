@@ -69,6 +69,10 @@
   }
 }
 
+.font-abril {
+  font-family: var(--font-abril-fatface);
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;
