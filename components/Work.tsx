@@ -10,7 +10,7 @@ const projects = [
   { title: 'GSMC', subtitle: 'Insurance website', image: '/gsmc.jpg', url: 'https://www.mutuelle-gsmc.fr/' },
   { title: 'Bricovis', subtitle: 'E-commerce website', image: '/bricovis.jpg', url: 'https://www.bricovis.fr/' },
   { title: 'Whiteswap', subtitle: 'Decentralized Exchange', image: '/exchange.jpg', url: 'https://ws.exchange/' },
-  { title: 'Based Place ( Side Project )', subtitle: 'DApp', image: '/basedplaceimg.svg', url: 'https://www.basedplace.xyz/' },
+  { title: 'Based Place ( Side Project )', subtitle: 'DApp', image: '/basedplaceimg.svg', url: 'https://basedplace.vercel.app/' },
 ]
 
 export default function Work() {
